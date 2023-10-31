@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./MainNavigation.css";
 
 const MainNavigation = () => {
@@ -9,13 +10,13 @@ const MainNavigation = () => {
     <div className="menu-bar">
       <ul>
         <li>
-          <a href="#">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="#">About us </a>
+          <Link to="/Aboutus">About us</Link>
         </li>
         <li className="MenuLink">
-          <a href="#">Menu </a>
+          <a href="/Menu">Menu </a>
           <div className="dropdown-menu">
             <ul>
               <li className="FoodLink">
@@ -46,7 +47,7 @@ const MainNavigation = () => {
           </div>
         </li>
         <li>
-          <a href="#">Cart</a>
+          <Link to="/Cart">Cart</Link>
         </li>
       </ul>
     </div>
