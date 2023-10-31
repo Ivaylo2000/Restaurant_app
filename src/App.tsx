@@ -1,9 +1,17 @@
 import React from "react";
+import MainNavigation from "./components/MainNavigation";
+import { createBrowserRouter } from "react-router-dom";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+  },
+]);
 
 function App() {
   return (
     <div>
-      <h1>uhoihuio</h1>
+      <MainNavigation />
     </div>
   );
 }
