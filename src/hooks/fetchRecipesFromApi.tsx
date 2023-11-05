@@ -1,14 +1,9 @@
-interface Recipe {
-  id: string;
-  title: string;
-  image: string;
-  ingredients: string[];
-}
+import { Recipe } from "../interface/Recipe";
 
 export const fetchRecipesFromApi = async (
   mealtag: string
 ): Promise<Recipe[]> => {
-  const apiKey = "091c098ff5a94c6c9c388b26800cb5a9";
+  const apiKey = "31c89035133b43c5aacf9ec9c6752090";
   const apiUrl = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&query=${mealtag}&number=5`;
 
   try {

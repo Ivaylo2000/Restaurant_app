@@ -1,12 +1,7 @@
 import { useState, useEffect } from "react";
-import { fetchIngredientsForRecipes } from "./fetchIngredientsForRecipes";
+import { fetchIngredientsForRecipes } from "./fetchingIngredientsForRecipes";
 import { fetchRecipesFromApi } from "./fetchRecipesFromApi";
-interface Recipe {
-  id: string;
-  title: string;
-  image: string;
-  ingredients: string[];
-}
+import { Recipe } from "../interface/Recipe";
 
 const useRecipeData = (mealtag: string) => {
   const [recipes, setRecipes] = useState<Recipe[]>([]);

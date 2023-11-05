@@ -1,14 +1,9 @@
-interface Recipe {
-  id: string;
-  title: string;
-  image: string;
-  ingredients: string[];
-}
+import { Recipe } from "../interface/Recipe";
 
 export const fetchIngredientsForRecipes = async (
   recipes: Recipe[]
 ): Promise<Recipe[]> => {
-  const apiKey = "091c098ff5a94c6c9c388b26800cb5a9";
+  const apiKey = "31c89035133b43c5aacf9ec9c6752090";
 
   for (let i = 0; i < recipes.length; i++) {
     const recipe = recipes[i];
@@ -19,10 +14,11 @@ export const fetchIngredientsForRecipes = async (
 
       if (response.ok) {
         const data = await response.json();
+        console.log(data);
         if (data.ingredients && Array.isArray(data.ingredients)) {
-          recipes[i].ingredients = data.ingredients.map(
-            (ingredient: any) => ingredient.name
-          );
+          recipes[i].ingredients = data.ingredients
+            .slice(0, 10)
+            .map((ingredient: any) => ingredient.name);
         }
       } else {
         console.error(

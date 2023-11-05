@@ -26,12 +26,15 @@ const ListComponent: React.FC<{ menuItem: string; mealtag: string }> = (
               <h2>{recipe.title}</h2>
               <div className="meal-wrapper">
                 <h3>Ingredients:</h3>
-                <p>{recipe.ingredients}</p>
-
-                <div className="button-wrapper">
-                  <Button text="Add" />
-                </div>
+                {/* <p>{recipe.ingredients.join(", ")}</p> */}
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Sapiente repudiandae deleniti repellendus ipsum eaque quas
+                  natus voluptas laborum, eos reprehenderit officiis unde totam
+                  animi deserunt, dolore optio, omnis cum? Sit.
+                </p>
               </div>
+              <Button text="Add" />
             </div>
           </li>
         ))}
