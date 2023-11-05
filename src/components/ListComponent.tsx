@@ -2,7 +2,7 @@ import React from "react";
 import Button from "./Button";
 import useRecipeData from "../hooks/fetchMeals";
 import Modal from "./Modal";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Recipe } from "../interface/Recipe";
 import "./ListComponent.css";
 
@@ -17,6 +17,17 @@ const ListComponent: React.FC<{ menuItem: string; mealtag: string }> = (
     setModalRecipe(recipe);
     setIsModalOpen(true);
   };
+  useEffect(() => {
+    if (isModalOpen === true) {
+      document.body.classList.add("active-modal");
+    } else {
+      document.body.classList.remove("active-modal");
+    }
+
+    return () => {
+      document.body.classList.remove("active-modal");
+    };
+  }, [isModalOpen]);
 
   return (
     <>

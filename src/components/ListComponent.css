@@ -12,13 +12,13 @@
 .FoodContainer {
   display: flex;
   flex-wrap: wrap;
-  gap: 4rem;
-  margin-left: 5rem;
+  gap: 2rem;
+  margin-left: 2rem;
   margin-bottom: 5rem;
 }
 .FoodContainer > li {
   display: flex;
-  width: 700px;
+  width: 650px;
   height: 250px;
   border: 1px solid var(--color-white);
   color: var(--color-white);
