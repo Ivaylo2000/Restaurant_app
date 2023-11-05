@@ -1,6 +1,6 @@
 import React from "react";
 import ListComponent from "../components/ListComponent";
-
+import Modal from "../components/Modal";
 const Menu: React.FC = () => {
   return (
     <>

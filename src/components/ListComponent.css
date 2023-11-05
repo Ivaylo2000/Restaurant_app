@@ -21,11 +21,12 @@
   width: 700px;
   height: 250px;
   border: 1px solid var(--color-white);
-  color: var(--color-primary);
+  color: var(--color-white);
 }
 .FoodContainer > li > img {
   width: 350px;
   height: 250px;
+  cursor: pointer;
 }
 .meal-wrapper {
   display: flex;
