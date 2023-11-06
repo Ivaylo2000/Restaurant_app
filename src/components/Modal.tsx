@@ -1,11 +1,20 @@
 import Button from "./Button";
 import "./Modal.css";
+import { useEffect } from "react";
+
 const Modal: React.FC<{
-  title?: string;
-  image?: string;
-  text?: string[];
+  title: string;
+  image: string;
+  text: string[];
   onClose: () => void;
 }> = (props) => {
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, []);
+
   return (
     <div className="modalBlur">
       <div className="modalBackground">

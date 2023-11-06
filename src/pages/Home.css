@@ -1,0 +1,58 @@
+.photoContainer {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider img {
+  height: auto;
+  height: 93vh;
+  object-fit: cover;
+  width: 100vw;
+}
+
+.right,
+.left {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.left {
+  position: absolute;
+  left: 20px;
+  top: 40%;
+}
+
+.right {
+  position: absolute;
+  right: 20px;
+  top: 40%;
+}
+
+.left:hover,
+.right:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.mainDiv {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}

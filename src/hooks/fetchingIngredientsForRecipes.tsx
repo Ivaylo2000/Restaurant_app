@@ -3,7 +3,7 @@ import { Recipe } from "../interface/Recipe";
 export const fetchIngredientsForRecipes = async (
   recipes: Recipe[]
 ): Promise<Recipe[]> => {
-  const apiKey = "c296ff97a0af48be9e49ecc69188e969";
+  const apiKey = "31c89035133b43c5aacf9ec9c6752090";
 
   for (let i = 0; i < recipes.length; i++) {
     const recipe = recipes[i];

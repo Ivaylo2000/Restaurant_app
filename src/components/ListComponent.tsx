@@ -2,49 +2,43 @@ import React from "react";
 import Button from "./Button";
 import useRecipeData from "../hooks/fetchMeals";
 import Modal from "./Modal";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Recipe } from "../interface/Recipe";
 import "./ListComponent.css";
 
-const ListComponent: React.FC<{ menuItem: string; mealtag: string }> = (
-  props
-) => {
-  const recipes: Recipe[] = useRecipeData(props.mealtag);
+const initialRecipe = { id: "", image: "", title: "", ingredients: [] };
+
+interface IListComponentProps {
+  menuItem: string;
+  mealtag: string;
+}
+
+const ListComponent = ({ mealtag, menuItem }: IListComponentProps) => {
+  const recipes: Recipe[] = useRecipeData(mealtag);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [modalRecipe, setModalRecipe] = useState<Recipe | null>(null);
+  const [modalRecipe, setModalRecipe] = useState<Recipe>(initialRecipe);
 
   const openModal = (recipe: Recipe) => {
     setModalRecipe(recipe);
     setIsModalOpen(true);
   };
-  useEffect(() => {
-    if (isModalOpen === true) {
-      document.body.classList.add("active-modal");
-    } else {
-      document.body.classList.remove("active-modal");
-    }
-
-    return () => {
-      document.body.classList.remove("active-modal");
-    };
-  }, [isModalOpen]);
 
   return (
     <>
       <div className="MenuContainer">
         {isModalOpen && (
           <Modal
-            title={modalRecipe?.title}
-            image={modalRecipe?.image}
-            text={modalRecipe?.ingredients}
+            title={modalRecipe.title}
+            image={modalRecipe.image}
+            text={modalRecipe.ingredients}
             onClose={() => {
-              setModalRecipe(null);
+              setModalRecipe(initialRecipe);
               setIsModalOpen(false);
             }}
           />
         )}
 
-        <h1>{props.menuItem}</h1>
+        <h1>{menuItem}</h1>
         <ul className="FoodContainer">
           {recipes.map((recipe: Recipe) => (
             <li key={recipe.id}>

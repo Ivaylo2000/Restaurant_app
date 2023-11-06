@@ -12,7 +12,7 @@ const MainNavigation = () => {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/Aboutus">About us</Link>
+          <Link to="/Aboutus">About</Link>
         </li>
         <li className="MenuLink">
           <Link to="/Menu">Menu</Link>

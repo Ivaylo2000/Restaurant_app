@@ -3,7 +3,7 @@ import { Recipe } from "../interface/Recipe";
 export const fetchRecipesFromApi = async (
   mealtag: string
 ): Promise<Recipe[]> => {
-  const apiKey = "c296ff97a0af48be9e49ecc69188e969";
+  const apiKey = "31c89035133b43c5aacf9ec9c6752090";
   const apiUrl = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&query=${mealtag}&number=5`;
 
   try {

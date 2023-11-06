@@ -4,6 +4,7 @@
   text-align: center;
   color: var(--color-white);
   background-color: var(--color-black-1);
+  height: 100vh;
 }
 .MenuContainer > h1 {
   font-size: 4rem;
@@ -13,18 +14,18 @@
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  margin-left: 2rem;
+  margin-left: 1rem;
   margin-bottom: 5rem;
 }
 .FoodContainer > li {
   display: flex;
-  width: 650px;
+  width: 600px;
   height: 250px;
   border: 1px solid var(--color-white);
   color: var(--color-white);
 }
 .FoodContainer > li > img {
-  width: 350px;
+  width: 250px;
   height: 250px;
   cursor: pointer;
 }
@@ -45,4 +46,5 @@
 .productDetails {
   height: 100vh;
   background-color: var(--color-black-1);
+  overflow-y: scroll;
 }
