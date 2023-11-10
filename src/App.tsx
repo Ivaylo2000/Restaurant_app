@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { Provider } from "react-redux";
+import store from "./redux/cart";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./pages/Root";
 import Home from "./pages/Home";
@@ -7,6 +8,7 @@ import Aboutus from "./pages/Aboutus";
 import Cart from "./pages/Cart";
 import ErrorPage from "./pages/ErrorPage";
 import ProductDetailPage from "./pages/PeoductDetails";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -23,7 +25,11 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <Provider store={store}>
+      <RouterProvider router={router} />{" "}
+    </Provider>
+  );
 }
 
 export default App;

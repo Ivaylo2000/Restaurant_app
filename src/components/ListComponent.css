@@ -5,6 +5,10 @@
   color: var(--color-white);
   background-color: var(--color-black-1);
   height: 100vh;
+  overflow: hidden;
+}
+.proba > .MenuContainer {
+  overflow: scroll;
 }
 .MenuContainer > h1 {
   font-size: 4rem;
@@ -46,5 +50,9 @@
 .productDetails {
   height: 100vh;
   background-color: var(--color-black-1);
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
+}
+
+.cartImage:hover {
+  cursor: default;
 }

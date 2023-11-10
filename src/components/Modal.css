@@ -3,7 +3,7 @@
   height: 100vh;
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
-  position: fixed;
+  /* position: fixed;  */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,8 +15,13 @@
   height: 800px;
   border-radius: 30px;
   margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 .closeButton {
+  width: 100%;
   display: flex;
   justify-content: flex-end;
 }
@@ -52,7 +57,7 @@
   width: 400px;
   height: 350px;
 }
-.footer > button {
+.modalBackground > button {
   background-color: var(--color-black-1);
   color: var(--color-white);
   font-size: 20px;
