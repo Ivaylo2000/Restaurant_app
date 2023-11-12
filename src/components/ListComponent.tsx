@@ -78,11 +78,7 @@ const ListComponent = ({ mealtag, menuItem }: IListComponentProps) => {
                 <h2>{recipe.title}</h2>
                 <div className="meal-wrapper">
                   <h3>Ingredients:</h3>
-                  {/* <p>{recipe.ingredients.join(", ")}</p> */}
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Sapiente repudiandae deleniti repellendus ipsum eaque quas
-                  </p>
+                  <p>{recipe.ingredients.join(", ")}</p>
                 </div>
                 <Button
                   text="Add"
