@@ -12,10 +12,10 @@ const MainNavigation = () => {
           <Link to="/">Home</Link>
         </li>
         <li className="MenuLink">
-          <Link to="/Menu">Menu</Link>
+          <span>Menu</span>
           <div className="dropdown-menu">
             <ul>
-              <li className="FoodLink">
+              <li>
                 <Link to="/Menu">Meals</Link>
                 <div className="dropdown-menu-1">
                   <ul>
