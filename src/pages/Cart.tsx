@@ -40,10 +40,12 @@ const Cart = () => {
             <li key={item.id}>
               <img className="cartImage" src={item.img} alt={item.title} />
               <div className="ingredients-wrapper">
-                <h1>{item.title}</h1>
-                <h3>Ingredients: </h3>
-                <p>{item.ingredients.join(", ")}</p>
-                <p>Quantity: {item.quantity}</p>
+                <h2>{item.title}</h2>
+                <div className="meal-wrapper">
+                  <h3>Ingredients: </h3>
+                  <p>{item.ingredients.join(", ")}</p>
+                  <p>Quantity: {item.quantity}</p>
+                </div>
                 <div className="buttonWrapper">
                   <Button
                     text="+"

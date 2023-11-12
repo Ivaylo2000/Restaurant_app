@@ -1,0 +1,8 @@
+.menuPageContainer {
+  margin-top: 80px;
+}
+@media (max-width: 767px) {
+  .menuPageContainer {
+    margin: 0 0 0 90px;
+  }
+}

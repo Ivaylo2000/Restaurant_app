@@ -2,10 +2,11 @@
   background-color: var(--color-black);
   height: 80px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 0 5%;
-  position: relative;
+  padding: 0 30px;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .menu-bar ul {
@@ -63,4 +64,25 @@
   left: 150px;
   top: 0;
   background-color: var(--color-black);
+}
+
+@media (max-width: 767px) {
+  .menu-bar {
+    display: flex;
+    flex-direction: column;
+    width: 30px;
+    height: 100vh;
+  }
+  .menu-bar > ul {
+    height: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu-bar > ul > li {
+    padding: 20px 0px 20px 0px;
+  }
+  /* .menu-bar ul li:hover .dropdown-menu {
+    display: none;
+  } */
 }

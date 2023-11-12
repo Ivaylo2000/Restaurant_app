@@ -9,7 +9,7 @@ const RootLayout = () => {
   const location = useLocation();
 
   useEffect(() => {
-    setIsHomepage(location.pathname === "/Home");
+    setIsHomepage(location.pathname === "/");
   }, [location]);
 
   return (

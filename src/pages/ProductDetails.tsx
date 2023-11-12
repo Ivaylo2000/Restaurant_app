@@ -6,7 +6,7 @@ const ProductDetailPage = () => {
   const { productId } = useParams();
 
   return (
-    <>
+    <div className="productDetails">
       {productId && (
         <ListComponent
           mealtag={productId.toString()}
@@ -15,7 +15,7 @@ const ProductDetailPage = () => {
           }s`}
         />
       )}
-    </>
+    </div>
   );
 };
 

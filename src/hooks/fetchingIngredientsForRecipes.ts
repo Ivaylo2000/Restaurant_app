@@ -4,6 +4,7 @@ export const fetchIngredientsForRecipes = async (
   recipes: Recipe[]
 ): Promise<Recipe[]> => {
   const apiKeys = [
+    "787018d693a44f939992d2cb4027334f",
     "31c89035133b43c5aacf9ec9c6752090",
     "b60cd8a4904c45a39a6e7edfba7af42d",
     "adf09070c54749deb0d8198b2d94ce8c",
@@ -32,23 +33,8 @@ export const fetchIngredientsForRecipes = async (
             success = true;
             break;
           }
-        } else {
-          console.error(
-            `Error fetching ingredients for recipe with ID ${recipe.id}`
-          );
         }
-      } catch (error) {
-        console.error(
-          `Error fetching ingredients for recipe with ID ${recipe.id}:`,
-          error
-        );
-      }
-    }
-
-    if (!success) {
-      console.error(
-        `Failed to fetch ingredients for recipe with ID ${recipe.id}`
-      );
+      } catch (error) {}
     }
   }
 

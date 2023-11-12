@@ -14,9 +14,7 @@ const useRecipeData = (mealtag: string) => {
           basicRecipes
         );
         setRecipes(recipesWithIngredients);
-      } catch (error) {
-        console.error("Error fetching recipes:", error);
-      }
+      } catch (error) {}
     };
 
     fetchRecipes();

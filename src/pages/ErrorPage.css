@@ -1,0 +1,12 @@
+.ErrorPage {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--color-black-1);
+}
+.ErrorPage > h1 {
+  color: var(--color-white);
+  width: 50%;
+}

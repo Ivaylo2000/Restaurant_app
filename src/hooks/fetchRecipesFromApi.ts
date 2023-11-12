@@ -4,6 +4,7 @@ export const fetchRecipesFromApi = async (
   mealtag: string
 ): Promise<Recipe[]> => {
   const apiKeys = [
+    "787018d693a44f939992d2cb4027334f",
     "31c89035133b43c5aacf9ec9c6752090",
     "b60cd8a4904c45a39a6e7edfba7af42d",
     "adf09070c54749deb0d8198b2d94ce8c",
@@ -32,15 +33,9 @@ export const fetchRecipesFromApi = async (
             ingredients: [],
           }));
           break;
-        } else {
-          console.error("No recipes found in the response.");
         }
-      } else {
-        console.error(`Request failed with status ${response.status}`);
       }
-    } catch (error) {
-      console.error("Error fetching recipe data:", error);
-    }
+    } catch (error) {}
   }
 
   return recipes;

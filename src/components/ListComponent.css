@@ -4,7 +4,6 @@
   text-align: center;
   color: var(--color-white);
   background-color: var(--color-black-1);
-
   overflow: hidden;
 }
 .MenuContainer > h1 {
@@ -53,12 +52,54 @@
   background-color: var(--color-black-1);
 }
 
-.cartImage:hover {
-  cursor: default;
-}
-
 /* cart */
 .cartDiv {
   height: 100vh;
   background-color: var(--color-black-1);
+  margin-top: 80px;
+}
+.cartImage:hover {
+  cursor: default;
+}
+@media (max-width: 767px) {
+  .FoodContainer > li {
+    display: flex;
+    width: 330px;
+    height: 150px;
+    border: 1px solid var(--color-white);
+    color: var(--color-white);
+  }
+
+  .FoodContainer > li > img {
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+  }
+  .ingredients-wrapper > h2 {
+    font-size: 13px;
+  }
+  .ingredients-wrapper > button {
+    width: 50px;
+    height: 15px;
+    font-size: 14px;
+  }
+  .meal-wrapper > h3 {
+    font-size: 10px;
+  }
+  .meal-wrapper > p {
+    font-size: 9px;
+  }
+
+  .cartDiv {
+    height: 100vh;
+    margin-left: 90px;
+    margin-top: 0;
+  }
+  /* .buttonWrapper {
+  } */
+  .buttonWrapper > button {
+    width: 50px;
+    height: 18px;
+    font-size: 14px;
+  }
 }

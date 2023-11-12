@@ -28,7 +28,7 @@ const Home = () => {
         <button className="left" onClick={prevImage}>
           <img src="leftArrow.png" alt="Arrow" />
         </button>
-        <img src={images[currentImage]} alt="Burger_img" />
+        <img src={images[currentImage]} alt="image" />
         <button className="right" onClick={nextImage}>
           <img src="rightArrow.png" alt="Arrow" />
         </button>

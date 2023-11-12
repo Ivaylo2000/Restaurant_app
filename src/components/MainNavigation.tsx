@@ -9,7 +9,7 @@ const MainNavigation = () => {
     <div className="menu-bar">
       <ul>
         <li>
-          <Link to="/Home">Home</Link>
+          <Link to="/">Home</Link>
         </li>
         <li className="MenuLink">
           <Link to="/Menu">Menu</Link>
