@@ -4,6 +4,7 @@ export const fetchIngredientsForRecipes = async (
   recipes: Recipe[]
 ): Promise<Recipe[]> => {
   const apiKeys = [
+    "2ec38606eb984156923612296506ccb5",
     "787018d693a44f939992d2cb4027334f",
     "31c89035133b43c5aacf9ec9c6752090",
     "b60cd8a4904c45a39a6e7edfba7af42d",
@@ -28,7 +29,7 @@ export const fetchIngredientsForRecipes = async (
           console.log(data);
           if (data.ingredients && Array.isArray(data.ingredients)) {
             recipes[i].ingredients = data.ingredients
-              .slice(0, 10)
+              .slice(0, 7)
               .map((ingredient: any) => ingredient.name);
             success = true;
             break;

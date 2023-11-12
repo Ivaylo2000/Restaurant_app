@@ -10,3 +10,13 @@
   color: var(--color-white);
   width: 50%;
 }
+
+@media (max-width: 767px) {
+  .ErrorPage {
+    margin-left: 90px;
+  }
+  .ErrorPage > h1 {
+    width: 100%;
+    line-height: 50px;
+  }
+}

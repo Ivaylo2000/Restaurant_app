@@ -89,7 +89,10 @@
   .meal-wrapper > p {
     font-size: 9px;
   }
-
+  .meal-wrapper > p:last-child {
+    margin-top: 6px;
+    font-weight: bold;
+  }
   .cartDiv {
     height: 100vh;
     width: 100%;
