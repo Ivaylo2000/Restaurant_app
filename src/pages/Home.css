@@ -1,61 +1,58 @@
-.photoContainer {
-  text-align: center;
+.HomePage {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  background-color: var(--color-black-1);
   align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.HomePage > h1 {
+  font-size: 100px;
+  color: var(--color-white);
+  margin-right: 30px;
+}
+
+.hideOverflow {
+  overflow: hidden;
+  height: 100vh;
+}
+.slider {
+  background-color: var(--color-white);
+  border-radius: 50%;
+  width: 600px;
+  height: 600px;
+}
+.slider > img {
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  position: absolute;
 }
 
 .slider {
   position: relative;
-  overflow: hidden;
-}
-
-.slider img {
-  height: auto;
-  height: 93vh;
-  object-fit: cover;
-  position: relative;
-  width: 100vw;
+  display: flex;
 }
 
 .right,
 .left {
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
   font-size: 2rem;
-  background-color: rgba(255, 255, 255, 0.5);
-  padding: 10px;
   border: none;
   cursor: pointer;
-}
-
-.left {
   position: absolute;
   z-index: 1;
-  left: 20px;
+}
+.left {
+  left: 5px;
   top: 40%;
 }
 
 .right {
-  position: absolute;
-  z-index: 1;
-  right: 20px;
+  right: 5px;
   top: 40%;
-}
-
-.left:hover,
-.right:hover {
-  background-color: rgba(255, 255, 255, 0.8);
-}
-.mainDiv {
-  overflow: hidden;
-  width: 100vw;
-  height: 100vh;
 }

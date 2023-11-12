@@ -32,7 +32,7 @@ const Cart = () => {
     );
   };
   return (
-    <div className="proba">
+    <div className="cartDiv">
       <div className="MenuContainer">
         <h1>Cart</h1>
         <ul className="FoodContainer">

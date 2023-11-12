@@ -4,30 +4,31 @@
   text-align: center;
   color: var(--color-white);
   background-color: var(--color-black-1);
-  height: 100vh;
+
   overflow: hidden;
-}
-.proba > .MenuContainer {
-  overflow: scroll;
 }
 .MenuContainer > h1 {
   font-size: 4rem;
   margin: 2rem;
 }
+.MenuContainer:last-child {
+  padding-bottom: 20px;
+}
 .FoodContainer {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  margin-left: 1rem;
-  margin-bottom: 5rem;
+  align-items: center;
+  justify-content: center;
 }
 .FoodContainer > li {
   display: flex;
-  width: 600px;
-  height: 250px;
+  width: 650px;
+
   border: 1px solid var(--color-white);
   color: var(--color-white);
 }
+
 .FoodContainer > li > img {
   width: 250px;
   height: 250px;
@@ -50,9 +51,14 @@
 .productDetails {
   height: 100vh;
   background-color: var(--color-black-1);
-  /* overflow-y: scroll; */
 }
 
 .cartImage:hover {
   cursor: default;
+}
+
+/* cart */
+.cartDiv {
+  height: 100vh;
+  background-color: var(--color-black-1);
 }

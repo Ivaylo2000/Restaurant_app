@@ -1,11 +1,12 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import ListComponent from "../components/ListComponent";
+import "./ProductDetails.css";
 const ProductDetailPage = () => {
   const { productId } = useParams();
 
   return (
-    <div className="productDetails">
+    <>
       {productId && (
         <ListComponent
           mealtag={productId.toString()}
@@ -14,7 +15,7 @@ const ProductDetailPage = () => {
           }s`}
         />
       )}
-    </div>
+    </>
   );
 };
 
