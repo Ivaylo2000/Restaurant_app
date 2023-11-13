@@ -3,7 +3,7 @@
   height: 100vh;
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
-  /* position: fixed;  */
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,12 +67,27 @@
 
 @media (max-width: 767px) {
   .modalBackground {
+    margin-top: 60px;
     width: 400px;
-    height: 700px;
+    height: 550px;
   }
 
   .modalContainer > img {
-    width: 300px;
-    height: 250px;
+    width: 250px;
+    height: 200px;
+  }
+  .closeButton {
+    height: 40px;
+  }
+
+  .modalIngredients {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+  .modalIngredients > h3 {
+    font-size: 20px;
+  }
+  .modalBackground > button {
+    height: 30px;
   }
 }
