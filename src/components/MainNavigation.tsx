@@ -1,9 +1,15 @@
 import React from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./MainNavigation.css";
 
 const MainNavigation = () => {
   const mealCategories = ["Burger", "Pizza", "Bbq", "Dessert"];
+  const [showDropdown, setShowDropdown] = useState(false);
+
+  const toggleDropdown = () => {
+    setShowDropdown(!showDropdown);
+  };
 
   return (
     <div className="menu-bar">
@@ -11,22 +17,24 @@ const MainNavigation = () => {
         <li>
           <Link to="/">Home</Link>
         </li>
-        <li className="MenuLink">
-          <span>Menu</span>
-          <div className="dropdown-menu">
+        <li>
+          <Link to="/Menu">Menu</Link>
+          <span
+            className={`menuSpan ${showDropdown ? "active" : ""}`}
+            onClick={toggleDropdown}
+          >
+            ▼
+          </span>
+
+          <div className={`dropdown-menu ${showDropdown ? "active" : ""}`}>
             <ul>
-              <li>
-                <Link to="/Menu">Meals</Link>
-                <div className="dropdown-menu-1">
-                  <ul>
-                    {mealCategories.map((category, index) => (
-                      <li key={index}>
-                        <Link to={`/Menu/${category}`}>{category}</Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </li>
+              {mealCategories.map((category, index) => (
+                <li key={index}>
+                  <Link onClick={toggleDropdown} to={`/Menu/${category}`}>
+                    {category}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </li>

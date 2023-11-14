@@ -19,8 +19,7 @@
   position: relative;
 }
 
-.menu-bar ul li a,
-span {
+.menu-bar ul li a {
   font-size: 20px;
   color: var(--color-white);
   text-decoration: none;
@@ -28,8 +27,7 @@ span {
   position: relative;
 }
 
-.menu-bar ul li a:hover,
-span:hover {
+.menu-bar ul li a:hover {
   color: var(--color-primary);
 }
 
@@ -41,58 +39,63 @@ span:hover {
   top: 100%;
   left: 0;
 }
-
-.menu-bar ul li:hover .dropdown-menu {
-  display: block;
-}
-
-.menu-bar ul li:hover .dropdown-menu ul {
-  display: block;
-  margin: 10px;
-}
-
-.menu-bar ul li:hover .dropdown-menu ul li {
-  width: 150px;
-  padding: 10px;
-}
-
-.dropdown-menu-1 {
-  display: none;
-}
-
-.dropdown-menu ul li:hover .dropdown-menu-1 {
-  display: block;
-  position: absolute;
-  left: 150px;
-  top: 0;
-  background-color: var(--color-black);
-}
-
-@media (max-width: 767px) {
-  /* 
-  .dropdown-menu {
-    top: 20px;
-    left: 55px;
-    width: 150px;
+@media (min-width: 768px) {
+  .menu-bar ul li:hover .dropdown-menu {
+    display: block;
   }
-  .dropdown-menu ul li:hover .dropdown-menu-1 {
-    left: 130px;
-    top: -10px;
-    background-color: var(--color-black);
-  } */
+
+  .menu-bar ul li:hover .dropdown-menu ul {
+    display: block;
+    margin: 10px;
+  }
+
+  .menu-bar ul li:hover .dropdown-menu ul li {
+    width: 150px;
+    padding: 10px;
+  }
+  .menuSpan {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
   .menu-bar {
     margin: 0;
     padding: 0;
     justify-content: center;
   }
+
+  .menuSpan {
+    margin-left: 20px;
+    cursor: pointer;
+    color: var(--color-white);
+  }
+
   .dropdown-menu {
     top: 60px;
     left: 0;
     width: 150px;
   }
-  .dropdown-menu ul li:hover .dropdown-menu-1 {
-    left: 40px;
-    top: 50px;
-    width: 100px;
+
+  .menu-bar ul li:nth-child(2) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .menuSpan.active {
+    color: var(--color-primary);
+  }
+
+  .menuSpan.active + .dropdown-menu {
+    display: block;
+  }
+
+  .menuSpan.active + .dropdown-menu ul {
+    display: block;
+    margin: 10px;
+  }
+
+  .menuSpan.active + .dropdown-menu ul li {
+    width: 150px;
+    padding: 10px;
   }
 }
