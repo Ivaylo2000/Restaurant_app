@@ -4,6 +4,7 @@ export const fetchIngredientsForRecipes = async (
   recipes: Recipe[]
 ): Promise<Recipe[]> => {
   const apiKeys = [
+    "140193d82c8c474380e2b1d07ac05ab5",
     "2ec38606eb984156923612296506ccb5",
     "787018d693a44f939992d2cb4027334f",
     "31c89035133b43c5aacf9ec9c6752090",
